@@ -1,139 +1,112 @@
-/* 📌 Genel Stil Ayarları */
+/* ==============================
+   📌 GENEL SAYFA AYARLARI
+   ============================== */
+
 body {
-    font-family: Arial, sans-serif; /* Yazı tipi */
-    background-color: #f4f4f4; /* Açık gri arka plan */
+    background: url('https://cdn.pixabay.com/photo/2023/08/23/11/18/rocks-8208314_1280.jpg') no-repeat center center fixed;
+    /* Arka plan resmini sayfaya ortalar ve ekran boyutuna göre ayarlar */
+    background-size: cover;
     color: #333; /* Yazı rengi koyu gri */
-    margin: 0; /* Kenar boşluklarını sıfırla */
-    padding: 0; /* İç boşlukları sıfırla */
+    font-family: Arial, sans-serif; /* Varsayılan yazı tipi */
+    margin: 0; /* Sayfanın kenar boşluklarını kaldırır */
+    padding: 0; /* Sayfanın iç boşluklarını kaldırır */
 }
 
-/* 📌 Header (Üst Kısım) */
+/* ==============================
+   📌 HEADER (ÜST KISIM)
+   ============================== */
+
 header {
     background: #333; /* Koyu gri arka plan */
-    color: white; /* Beyaz yazılar */
-    text-align: center; /* Ortalanmış metin */
-    padding: 20px 0; /* Üst ve alt boşluk */
+    color: white; /* Yazı rengi beyaz */
+    text-align: center; /* Başlığı ortalar */
+    padding: 20px; /* İç boşluk ekler */
+    width: 100%; /* Tüm genişliği kaplamasını sağlar */
 }
 
-/* 📌 Navigasyon (Menü) */
-nav ul {
-    list-style: none; /* Liste işaretlerini kaldır */
-    padding: 0; /* Boşlukları sıfırla */
-    text-align: center; /* Menü öğelerini ortala */
+/* ==============================
+   📌 NAVİGASYON MENÜSÜ (MENÜ ÇERÇEVESİ)
+   ============================== */
+
+nav {
+    width: 100%; /* Menünün tam genişlikte olmasını sağlar */
+    display: flex; /* Menü öğelerini yan yana dizer */
+    justify-content: center; /* Butonları yatayda ortalar */
+    padding: 10px 0; /* Üst ve alt boşluk ekler */
+    background: rgba(0, 0, 0, 0.8); /* Hafif şeffaf siyah arka plan */
 }
+
+/* ==============================
+   📌 NAVİGASYON (MENÜ) LİSTESİ
+   ============================== */
+
+nav ul {
+    list-style: none; /* Liste işaretlerini (madde imleri) kaldırır */
+    padding: 0; /* İç boşlukları sıfırlar */
+    display: flex; /* Menü öğelerini yatay hizalar */
+    flex-wrap: wrap; /* Küçük ekranlarda butonları alta geçmeye zorlar */
+    justify-content: center; /* Butonları merkezde toplar */
+    gap: 10px; /* Butonlar arasına boşluk koyar */
+}
+
+/* ==============================
+   📌 NAVİGASYON MENÜ ELEMANLARI
+   ============================== */
 
 nav ul li {
-    display: inline-block; /* Menü öğelerini yatay hizala */
-    margin: 0 15px; /* Menü öğeleri arasında boşluk */
+    display: inline; /* Liste elemanlarını satır içi hale getirir */
 }
+
+/* ==============================
+   📌 MENÜ BUTONLARI (STİL)
+   ============================== */
 
 nav ul li a {
-    color: white; /* Bağlantı rengi beyaz */
-    text-decoration: none; /* Altı çizgili olmasın */
-    font-weight: bold; /* Kalın yazı */
-    transition: color 0.3s ease-in-out; /* Renk geçiş efekti */
+    text-decoration: none; /* Altı çizgiyi kaldırır */
+    font-weight: bold; /* Yazıyı kalın yapar */
+    color: white; /* Yazı rengini beyaz yapar */
+    padding: 12px 20px; /* Buton boyutlarını ayarlar */
+    font-size: 1.2em; /* Yazı boyutunu biraz büyütür */
+    background: #333; /* Buton arka plan rengi koyu gri */
+    border-radius: 5px; /* Kenarları yuvarlar */
+    transition: background 0.3s; /* Renk geçiş efekti ekler */
+    display: block; /* Butonları blok haline getirir */
 }
 
+/* 📌 BUTON ÜZERİNE GELİNDİĞİNDE RENGİN DEĞİŞMESİ */
 nav ul li a:hover {
-    color: #ffcc00; /* Üzerine gelince sarı renk olsun */
+    background: #555; /* Buton arka plan rengi koyu griye döner */
 }
 
-/* 📌 Aktif Sayfa Vurgusu */
-nav ul li a.active {
-    color: #ffcc00; /* Aktif sayfa sarı renkte görünssün */
-    text-decoration: underline;
-}
+/* ==============================
+   📌 MOBİL CİHAZLAR İÇİN ÖZEL STİL
+   ============================== */
 
-/* 📌 Ana İçerik */
-section {
-    width: 80%; /* İçeriğin genişliği */
-    margin: 20px auto; /* Ortaya hizala */
-    padding: 20px; /* İç boşluk */
-    background: white; /* Beyaz arka plan */
-    border-radius: 8px; /* Köşeleri yuvarla */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölge ekle */
-}
+@media (max-width: 768px) { /* 768px'den küçük ekranlar için geçerli olacak stil */
 
-/* 📌 Blog Sayfası Stilleri */
-section {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    text-align: center;
-    font-size: 24px;
-    color: #333;
-}
-
-ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-/* 📌 Form */
-form {
-    display: flex; /* Elemanları dikey hizala */
-    flex-direction: column; /* Dikey sıralama */
-}
-
-input, textarea {
-    padding: 10px; /* İç boşluk */
-    margin: 5px 0; /* Üst-alt boşluk */
-    border: 1px solid #ddd; /* Açık gri çerçeve */
-    border-radius: 5px; /* Köşeleri yuvarla */
-    width: 100%; /* Tam genişlik */
-}
-
-/* 📌 Buton */
-button {
-    background: #333; /* Koyu gri buton */
-    color: white; /* Beyaz yazı */
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out; /* Geçiş efekti eklendi */
-}
-
-button:hover {
-    background: #555; /* Açık gri tonu */
-}
-
-/* 📌 Footer (Alt Kısım) */
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #333;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* 📌 Mobil Uyumluluk (Responsive Tasarım) */
-@media (max-width: 768px) {
-    section {
-        width: 95%; /* Mobilde içeriği biraz genişlet */
+    /* 📌 MENÜYÜ DİKEY HALE GETİRME */
+    nav {
+        flex-direction: column;
+        text-align: center;
     }
 
+    /* 📌 MENÜ LİSTESİNİ DİKEY HALE GETİRME */
     nav ul {
+        flex-direction: column; /* Butonları dikey hizalar */
+        align-items: center; /* Butonları ortalar */
         padding: 0;
     }
 
+    /* 📌 BUTONLARI MOBİLDE GENİŞLETME */
     nav ul li {
-        display: block; /* Menü öğelerini dikey hizala */
-        margin: 10px 0; /* Üst-alt boşluk */
+        width: 100%; /* Butonların tam genişlikte olmasını sağlar */
+        text-align: center; /* Yazıları ortalar */
+    }
+
+    /* 📌 BUTON BOYUTLARINI KÜÇÜLTME */
+    nav ul li a {
+        width: 80%; /* Butonları biraz genişletir */
+        font-size: 1em; /* Yazı boyutunu küçültür */
+        padding: 10px; /* Buton iç boşluğunu azaltır */
     }
 }
