@@ -1,6 +1,4 @@
-/* ==============================
-   📌 GENEL SAYFA AYARLARI
-   ============================== */
+/* 📌 Genel Sayfa Stili */
 body {
     background: url('https://cdn.pixabay.com/photo/2023/08/23/11/18/rocks-8208314_1280.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -8,84 +6,77 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* 📌 Yatay kaydırmayı engeller */
 }
 
-/* ==============================
-   📌 HEADER (ÜST KISIM)
-   ============================== */
+/* 📌 HEADER (Başlık Bölümü) */
 header {
     background: #333;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
     width: 100%;
 }
 
-/* ==============================
-   📌 NAVİGASYON MENÜSÜ
-   ============================== */
+/* 📌 NAVİGASYON MENÜSÜ */
 nav {
     text-align: center;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Hafif şeffaf siyah */
-    padding: 10px 0;
+    margin: 30px auto; /* Mobilde daha iyi durması için küçülttük */
+    width: 90%;
 }
 
-/* 📌 MENÜ LİSTESİ */
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
     display: flex;
+    flex-wrap: wrap; /* Küçük ekranlarda elemanları alt alta geçirir */
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    gap: 10px; /* Butonlar arasındaki boşluk */
 }
 
-/* 📌 MENÜ ELEMANLARI */
 nav ul li {
     display: inline;
 }
 
-/* 📌 BUTON STİLİ */
+/* 📌 MENÜ BUTONLARI */
 nav ul li a {
     text-decoration: none;
     font-weight: bold;
     color: white;
-    padding: 10px 15px;
-    font-size: 1em;
+    padding: 15px 25px; /* Mobil uyum için küçültüldü */
+    font-size: 1.2em; /* Mobilde daha iyi görünmesi için küçültüldü */
     background: #333;
     border-radius: 5px;
     transition: background 0.3s;
-    display: inline-block;
+    display: block; /* Mobil uyum için blok element yaptık */
 }
 
-/* 📌 BUTON ÜZERİNE GELİNDİĞİNDE */
 nav ul li a:hover {
     background: #555;
 }
 
-/* ==============================
-   📌 MOBİL UYUMLULUK (Media Query)
-   ============================== */
-@media (max-width: 768px) {
-    /* 📌 MENÜYÜ DİKEY HALE GETİR */
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-    }
+/* 📌 İÇERİK BÖLÜMÜ */
+section {
+    max-width: 800px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.8); /* Sayfanın içeriğini daha okunaklı hale getirmek için yarı saydam arka plan */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-    /* 📌 BUTON BOYUTLARINI DÜŞÜR */
-    nav ul li a {
-        font-size: 0.9em;
-        padding: 8px 12px;
+/* 📌 MOBİL TASARIM İÇİN MEDİA QUERY */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Küçük ekranlarda menüyü dikey hale getirir */
+        align-items: center;
     }
     
-    /* 📌 HEADER KISMINI DÜŞÜR */
-    header {
-        padding: 10px;
-        font-size: 0.9em;
+    nav ul li a {
+        font-size: 1em;
+        padding: 12px 20px; /* Mobil için daha küçük padding */
+    }
+    
+    section {
+        width: 90%; /* İçeriğin mobilde daha iyi görünmesini sağlar */
     }
 }
