@@ -1,0 +1,139 @@
+/* 📌 Genel Stil Ayarları */
+body {
+    font-family: Arial, sans-serif; /* Yazı tipi */
+    background-color: #f4f4f4; /* Açık gri arka plan */
+    color: #333; /* Yazı rengi koyu gri */
+    margin: 0; /* Kenar boşluklarını sıfırla */
+    padding: 0; /* İç boşlukları sıfırla */
+}
+
+/* 📌 Header (Üst Kısım) */
+header {
+    background: #333; /* Koyu gri arka plan */
+    color: white; /* Beyaz yazılar */
+    text-align: center; /* Ortalanmış metin */
+    padding: 20px 0; /* Üst ve alt boşluk */
+}
+
+/* 📌 Navigasyon (Menü) */
+nav ul {
+    list-style: none; /* Liste işaretlerini kaldır */
+    padding: 0; /* Boşlukları sıfırla */
+    text-align: center; /* Menü öğelerini ortala */
+}
+
+nav ul li {
+    display: inline-block; /* Menü öğelerini yatay hizala */
+    margin: 0 15px; /* Menü öğeleri arasında boşluk */
+}
+
+nav ul li a {
+    color: white; /* Bağlantı rengi beyaz */
+    text-decoration: none; /* Altı çizgili olmasın */
+    font-weight: bold; /* Kalın yazı */
+    transition: color 0.3s ease-in-out; /* Renk geçiş efekti */
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Üzerine gelince sarı renk olsun */
+}
+
+/* 📌 Aktif Sayfa Vurgusu */
+nav ul li a.active {
+    color: #ffcc00; /* Aktif sayfa sarı renkte görünssün */
+    text-decoration: underline;
+}
+
+/* 📌 Ana İçerik */
+section {
+    width: 80%; /* İçeriğin genişliği */
+    margin: 20px auto; /* Ortaya hizala */
+    padding: 20px; /* İç boşluk */
+    background: white; /* Beyaz arka plan */
+    border-radius: 8px; /* Köşeleri yuvarla */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölge ekle */
+}
+
+/* 📌 Blog Sayfası Stilleri */
+section {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* 📌 Form */
+form {
+    display: flex; /* Elemanları dikey hizala */
+    flex-direction: column; /* Dikey sıralama */
+}
+
+input, textarea {
+    padding: 10px; /* İç boşluk */
+    margin: 5px 0; /* Üst-alt boşluk */
+    border: 1px solid #ddd; /* Açık gri çerçeve */
+    border-radius: 5px; /* Köşeleri yuvarla */
+    width: 100%; /* Tam genişlik */
+}
+
+/* 📌 Buton */
+button {
+    background: #333; /* Koyu gri buton */
+    color: white; /* Beyaz yazı */
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out; /* Geçiş efekti eklendi */
+}
+
+button:hover {
+    background: #555; /* Açık gri tonu */
+}
+
+/* 📌 Footer (Alt Kısım) */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 📌 Mobil Uyumluluk (Responsive Tasarım) */
+@media (max-width: 768px) {
+    section {
+        width: 95%; /* Mobilde içeriği biraz genişlet */
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block; /* Menü öğelerini dikey hizala */
+        margin: 10px 0; /* Üst-alt boşluk */
+    }
+}
