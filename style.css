@@ -1,112 +1,91 @@
 /* ==============================
    📌 GENEL SAYFA AYARLARI
    ============================== */
-
 body {
     background: url('https://cdn.pixabay.com/photo/2023/08/23/11/18/rocks-8208314_1280.jpg') no-repeat center center fixed;
-    /* Arka plan resmini sayfaya ortalar ve ekran boyutuna göre ayarlar */
     background-size: cover;
-    color: #333; /* Yazı rengi koyu gri */
-    font-family: Arial, sans-serif; /* Varsayılan yazı tipi */
-    margin: 0; /* Sayfanın kenar boşluklarını kaldırır */
-    padding: 0; /* Sayfanın iç boşluklarını kaldırır */
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* 📌 Yatay kaydırmayı engeller */
 }
 
 /* ==============================
    📌 HEADER (ÜST KISIM)
    ============================== */
-
 header {
-    background: #333; /* Koyu gri arka plan */
-    color: white; /* Yazı rengi beyaz */
-    text-align: center; /* Başlığı ortalar */
-    padding: 20px; /* İç boşluk ekler */
-    width: 100%; /* Tüm genişliği kaplamasını sağlar */
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
 }
 
 /* ==============================
-   📌 NAVİGASYON MENÜSÜ (MENÜ ÇERÇEVESİ)
+   📌 NAVİGASYON MENÜSÜ
    ============================== */
-
 nav {
-    width: 100%; /* Menünün tam genişlikte olmasını sağlar */
-    display: flex; /* Menü öğelerini yan yana dizer */
-    justify-content: center; /* Butonları yatayda ortalar */
-    padding: 10px 0; /* Üst ve alt boşluk ekler */
-    background: rgba(0, 0, 0, 0.8); /* Hafif şeffaf siyah arka plan */
+    text-align: center;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Hafif şeffaf siyah */
+    padding: 10px 0;
 }
 
-/* ==============================
-   📌 NAVİGASYON (MENÜ) LİSTESİ
-   ============================== */
-
+/* 📌 MENÜ LİSTESİ */
 nav ul {
-    list-style: none; /* Liste işaretlerini (madde imleri) kaldırır */
-    padding: 0; /* İç boşlukları sıfırlar */
-    display: flex; /* Menü öğelerini yatay hizalar */
-    flex-wrap: wrap; /* Küçük ekranlarda butonları alta geçmeye zorlar */
-    justify-content: center; /* Butonları merkezde toplar */
-    gap: 10px; /* Butonlar arasına boşluk koyar */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-/* ==============================
-   📌 NAVİGASYON MENÜ ELEMANLARI
-   ============================== */
-
+/* 📌 MENÜ ELEMANLARI */
 nav ul li {
-    display: inline; /* Liste elemanlarını satır içi hale getirir */
+    display: inline;
 }
 
-/* ==============================
-   📌 MENÜ BUTONLARI (STİL)
-   ============================== */
-
+/* 📌 BUTON STİLİ */
 nav ul li a {
-    text-decoration: none; /* Altı çizgiyi kaldırır */
-    font-weight: bold; /* Yazıyı kalın yapar */
-    color: white; /* Yazı rengini beyaz yapar */
-    padding: 12px 20px; /* Buton boyutlarını ayarlar */
-    font-size: 1.2em; /* Yazı boyutunu biraz büyütür */
-    background: #333; /* Buton arka plan rengi koyu gri */
-    border-radius: 5px; /* Kenarları yuvarlar */
-    transition: background 0.3s; /* Renk geçiş efekti ekler */
-    display: block; /* Butonları blok haline getirir */
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1em;
+    background: #333;
+    border-radius: 5px;
+    transition: background 0.3s;
+    display: inline-block;
 }
 
-/* 📌 BUTON ÜZERİNE GELİNDİĞİNDE RENGİN DEĞİŞMESİ */
+/* 📌 BUTON ÜZERİNE GELİNDİĞİNDE */
 nav ul li a:hover {
-    background: #555; /* Buton arka plan rengi koyu griye döner */
+    background: #555;
 }
 
 /* ==============================
-   📌 MOBİL CİHAZLAR İÇİN ÖZEL STİL
+   📌 MOBİL UYUMLULUK (Media Query)
    ============================== */
-
-@media (max-width: 768px) { /* 768px'den küçük ekranlar için geçerli olacak stil */
-
-    /* 📌 MENÜYÜ DİKEY HALE GETİRME */
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    /* 📌 MENÜ LİSTESİNİ DİKEY HALE GETİRME */
+@media (max-width: 768px) {
+    /* 📌 MENÜYÜ DİKEY HALE GETİR */
     nav ul {
-        flex-direction: column; /* Butonları dikey hizalar */
-        align-items: center; /* Butonları ortalar */
-        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
     }
 
-    /* 📌 BUTONLARI MOBİLDE GENİŞLETME */
-    nav ul li {
-        width: 100%; /* Butonların tam genişlikte olmasını sağlar */
-        text-align: center; /* Yazıları ortalar */
-    }
-
-    /* 📌 BUTON BOYUTLARINI KÜÇÜLTME */
+    /* 📌 BUTON BOYUTLARINI DÜŞÜR */
     nav ul li a {
-        width: 80%; /* Butonları biraz genişletir */
-        font-size: 1em; /* Yazı boyutunu küçültür */
-        padding: 10px; /* Buton iç boşluğunu azaltır */
+        font-size: 0.9em;
+        padding: 8px 12px;
+    }
+    
+    /* 📌 HEADER KISMINI DÜŞÜR */
+    header {
+        padding: 10px;
+        font-size: 0.9em;
     }
 }
