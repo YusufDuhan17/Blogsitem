@@ -1,57 +1,62 @@
 /* 📌 Genel Stil Ayarları */
 body {
-    font-family: Arial, sans-serif; /* Yazı tipi */
-    background-color: #f4f4f4; /* Açık gri arka plan */
-    color: #333; /* Yazı rengi koyu gri */
-    margin: 0; /* Kenar boşluklarını sıfırla */
-    padding: 0; /* İç boşlukları sıfırla */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 /* 📌 Header (Üst Kısım) */
 header {
-    background: #333; /* Koyu gri arka plan */
-    color: white; /* Beyaz yazılar */
-    text-align: center; /* Ortalanmış metin */
-    padding: 20px 0; /* Üst ve alt boşluk */
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
 
 /* 📌 Navigasyon (Menü) */
+nav {
+    text-align: center;
+    padding: 10px 0;
+}
+
 nav ul {
-    list-style: none; /* Liste işaretlerini kaldır */
-    padding: 0; /* Boşlukları sıfırla */
-    text-align: center; /* Menü öğelerini ortala */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline-block; /* Menü öğelerini yatay hizala */
-    margin: 0 15px; /* Menü öğeleri arasında boşluk */
+    margin: 5px;
 }
 
 nav ul li a {
-    color: white; /* Bağlantı rengi beyaz */
-    text-decoration: none; /* Altı çizgili olmasın */
-    font-weight: bold; /* Kalın yazı */
-    transition: color 0.3s ease-in-out; /* Renk geçiş efekti */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    background: #333;
+    border-radius: 5px;
+    transition: background 0.3s;
+    display: block;
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Üzerine gelince sarı renk olsun */
-}
-
-/* 📌 Aktif Sayfa Vurgusu */
-nav ul li a.active {
-    color: #ffcc00; /* Aktif sayfa sarı renkte görünssün */
-    text-decoration: underline;
+    background: #555;
 }
 
 /* 📌 Ana İçerik */
 section {
-    width: 80%; /* İçeriğin genişliği */
-    margin: 20px auto; /* Ortaya hizala */
-    padding: 20px; /* İç boşluk */
-    background: white; /* Beyaz arka plan */
-    border-radius: 8px; /* Köşeleri yuvarla */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif gölge ekle */
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 📌 Blog Sayfası Stilleri */
@@ -83,32 +88,32 @@ ul li {
 
 /* 📌 Form */
 form {
-    display: flex; /* Elemanları dikey hizala */
-    flex-direction: column; /* Dikey sıralama */
+    display: flex;
+    flex-direction: column;
 }
 
 input, textarea {
-    padding: 10px; /* İç boşluk */
-    margin: 5px 0; /* Üst-alt boşluk */
-    border: 1px solid #ddd; /* Açık gri çerçeve */
-    border-radius: 5px; /* Köşeleri yuvarla */
-    width: 100%; /* Tam genişlik */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
 }
 
 /* 📌 Buton */
 button {
-    background: #333; /* Koyu gri buton */
-    color: white; /* Beyaz yazı */
+    background: #333;
+    color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
     margin-top: 10px;
     border-radius: 5px;
-    transition: background 0.3s ease-in-out; /* Geçiş efekti eklendi */
+    transition: background 0.3s;
 }
 
 button:hover {
-    background: #555; /* Açık gri tonu */
+    background: #555;
 }
 
 /* 📌 Footer (Alt Kısım) */
@@ -125,15 +130,21 @@ footer {
 /* 📌 Mobil Uyumluluk (Responsive Tasarım) */
 @media (max-width: 768px) {
     section {
-        width: 95%; /* Mobilde içeriği biraz genişlet */
+        width: 95%;
+        padding: 15px;
     }
 
     nav ul {
-        padding: 0;
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul li {
-        display: block; /* Menü öğelerini dikey hizala */
-        margin: 10px 0; /* Üst-alt boşluk */
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 8px 12px;
     }
 }
